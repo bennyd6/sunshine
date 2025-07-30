@@ -18,13 +18,59 @@
       color: #333;
     }
 
-    header {
-      background: linear-gradient(135deg, #fcb045, #fd1d1d);
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-      animation: fadeInDown 1s ease-out;
-    }
+header {
+  background: linear-gradient(135deg, #fcb045, #fd1d1d);
+  color: white;
+  padding: 30px 20px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: left;
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.in-logo h1 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.in-logo p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    width: 140px;
+  }
+
+  .in-logo h1 {
+    font-size: 1.5rem;
+  }
+
+  .in-logo p {
+    font-size: 0.95rem;
+  }
+}
 
     nav {
       display: flex;
@@ -115,10 +161,15 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Sunshine Security & Housekeeping Services</h1>
-    <p>Your Trusted Partner for Safety and Cleanliness</p>
-  </header>
+    <header>
+      <div class="header-content">
+        <img src="./logo.jpg" alt="Company Logo" class="logo" />
+        <div class="in-logo">
+          <h1>Sunshine Security & Housekeeping Services</h1>
+          <p>Your Trusted Partner for Safety and Cleanliness</p>
+        </div>
+      </div>
+    </header>
 
   <nav>
     <a href="#home">Home</a>
